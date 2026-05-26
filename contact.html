@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wolcrest Schools</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .map-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span>🎓</span> Wolcrest Schools
+            </a>
+            <button class="menu-toggle">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="calendar.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Get in touch with Wolcrest Schools</p>
+    </section>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+        <!-- Contact Form Section -->
+        <section>
+            <h2>Send Us a Message</h2>
+            <p style="margin-bottom: 2rem;">
+                Have a question or message? Fill out the form below and we'll get back to you as soon as possible.
+            </p>
+
+            <div class="two-column">
+                <form id="contactForm" class="form-container">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">-- Select a Subject --</option>
+                            <option value="admissions">Admissions Inquiry</option>
+                            <option value="academics">Academics Question</option>
+                            <option value="fees">Fees & Payment</option>
+                            <option value="events">Events & Activities</option>
+                            <option value="feedback">Feedback/Suggestion</option>
+                            <option value="complaint">Complaint/Issue</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required
+                            placeholder="Please share your message or question..."></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
+
+                    <p style="font-size: 0.85rem; color: #999; margin-top: 1rem;">
+                        * Required fields. We typically respond within 24 hours.
+                    </p>
+                </form>
+
+                <div>
+                    <h3>Contact Information</h3>
+
+                    <div class="contact-methods">
+                        <div class="info-box">
+                            <h4>📍 Address</h4>
+                            <p>
+                                123 Education Street<br>
+                                Knowledge City, KC 12345<br>
+                                Country
+                            </p>
+                        </div>
+
+                        <div class="info-box">
+                            <h4>📞 Phone</h4>
+                            <p>
+                                <strong>Main:</strong> +1 (555) 123-4567<br>
+                                <strong>Admissions:</strong> +1 (555) 123-4568<br>
+                                <strong>Support:</strong> +1 (555) 123-4569
+                            </p>
+                        </div>
+
+                        <div class="info-box">
+                            <h4>✉️ Email</h4>
+                            <p>
+                                <strong>General:</strong> info@wolcrestschools.edu<br>
+                                <strong>Admissions:</strong> admissions@wolcrestschools.edu<br>
+                                <strong>Support:</strong> support@wolcrestschools.edu
+                            </p>
+                        </div>
+
+                        <div class="info-box">
+                            <h4>🕐 Office Hours</h4>
+                            <p>
+                                <strong>Monday - Friday:</strong> 7:30 AM - 4:00 PM<br>
+                                <strong>Saturday:</strong> 9:00 AM - 2:00 PM<br>
+                                <strong>Sunday:</strong> Closed
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 2rem;">Department Contacts</h3>
+
+                    <table style="font-size: 0.95rem; margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th>Department</th>
+                                <th>Extension</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Principal's Office</td>
+                                <td>200</td>
+                            </tr>
+                            <tr>
+                                <td>Admissions</td>
+                                <td>201</td>
+                            </tr>
+                            <tr>
+                                <td>Academic Affairs</td>
+                                <td>202</td>
+                            </tr>
+                            <tr>
+                                <td>Finance & Accounts</td>
+                                <td>203</td>
+                            </tr>
+                            <tr>
+                                <td>Student Affairs</td>
+                                <td>204</td>
+                            </tr>
+                            <tr>
+                                <td>Events & Activities</td>
+                                <td>205</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location & Map Section -->
+        <section>
+            <h2>Visit Us</h2>
+            <p style="margin-bottom: 1rem;">
+                Located in the heart of Knowledge City, Wolcrest Schools is easily accessible by public
+                transportation
+                and has ample parking facilities. You can also take a virtual tour of our campus.
+            </p>
+
+            <!-- Google Maps Embed Placeholder -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.287471231098!2d-74.00601592346962!3d40.71287367138999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e828aa4d%3A0x1e1f5e5e5e5e5e5e!2s123%20Education%20St%2C%20Knowledge%20City!5e0!3m2!1sen!2sus!4v1234567890"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="info-box" style="background: #cfe9ff; border-left-color: #0066cc;">
+                <strong>Directions:</strong> Take the Metro Line 5 to "Education Station" and exit towards the north.
+                Our campus is a 5-minute walk from the station. Ample parking is available in the school parking lot
+                (₹100/day for visitors).
+            </div>
+        </section>
+
+        <!-- Frequently Asked Questions Section -->
+        <section>
+            <h2>Frequently Asked Questions</h2>
+            <p style="margin-bottom: 2rem;">
+                Find quick answers to commonly asked questions below:
+            </p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h4>❓ What are the office hours?</h4>
+                    <p>
+                        Our office is open Monday to Friday from 7:30 AM to 4:00 PM, and Saturday from 9:00 AM to 2:00
+                        PM.
+                        Sunday is closed. For urgent matters, you can call our emergency hotline.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>❓ How long does it take to get a response?</h4>
+                    <p>
+                        We aim to respond to all inquiries within 24 hours. During peak periods like admission season,
+                        it may take up to 48 hours. Urgent matters are prioritized.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>❓ Can I schedule a campus tour?</h4>
+                    <p>
+                        Yes! Campus tours are available by appointment. Please contact the admissions office at
+                        admissions@wolcrestschools.edu or call +1 (555) 123-4568 to schedule a tour.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>❓ What if I have an urgent issue?</h4>
+                    <p>
+                        For urgent matters, please call our main office at +1 (555) 123-4567 and press 0 to speak
+                        with the operator, or visit our office in person during office hours.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>❓ How do I pay fees?</h4>
+                    <p>
+                        We accept online payments, bank transfers, credit cards, and checks. For details about payment
+                        methods
+                        and installment plans, contact our Finance department at +1 (555) 123-4567 ext. 203.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>❓ Is there an emergency contact?</h4>
+                    <p>
+                        In case of emergencies, please call our emergency hotline or visit the office immediately.
+                        For student-related emergencies, contact the student affairs office at ext. 204.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section>
+            <h2>Stay Updated</h2>
+            <p style="margin-bottom: 2rem;">
+                Subscribe to our newsletter to receive updates about school events, announcements, and important dates.
+            </p>
+
+            <div class="form-container" style="max-width: 500px;">
+                <form onsubmit="handleNewsletterSignup(event)">
+                    <div class="form-group">
+                        <label for="newsletter-email">Email Address *</label>
+                        <input type="email" id="newsletter-email" name="newsletter-email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newsletter-type">I'm interested in updates about: *</label>
+                        <select id="newsletter-type" name="newsletter-type" required>
+                            <option value="">-- Select --</option>
+                            <option value="academic">Academic News</option>
+                            <option value="events">Events & Activities</option>
+                            <option value="admissions">Admissions Info</option>
+                            <option value="all">All Updates</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="cta-button" style="width: 100%;">Subscribe</button>
+
+                    <p style="font-size: 0.85rem; color: #999; margin-top: 1rem;">
+                        We promise not to spam. You can unsubscribe anytime.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About</h4>
+                <p>Wolcrest Schools is dedicated to providing quality education and fostering holistic development
+                    of students.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul style="list-style: none;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 123 Education Street, Knowledge City, KC 12345</p>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>✉️ info@wolcrestschools.edu</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Wolcrest Schools. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function handleNewsletterSignup(event) {
+            event.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            const type = document.getElementById('newsletter-type').value;
+            alert(`Thank you for subscribing! We'll send you ${type} updates at ${email}.`);
+            event.target.reset();
+        }
+    </script>
+</body>
+
+</html>
