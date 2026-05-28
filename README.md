@@ -181,4 +181,3 @@ This website template is provided as-is for educational purposes.
 **Created for:** Wolcrest Schools
 **Date:** 2026
 **Version:** 1.0
-

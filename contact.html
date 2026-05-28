@@ -2,400 +2,361 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendar & Events - Wolcrest Schools</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolcrest Schools | Contact & Support</title>
+    <meta name="description" content="Welcome to the official Wolcrest prep. school/College website where all the necessary details and information can be found. This is where the future is built">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .map-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 0 20px rgba(0, 102, 255, 0.2), inset 0 0 20px rgba(0, 102, 255, 0.05);
+            border: 2px solid rgba(0, 102, 255, 0.3);
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- ==================== HEADER & NAVIGATION ==================== -->
-  <header>
-    <div class="header-container">
-      <a href="index.html" class="logo">
-        <span>🎓</span> Wolcrest Schools
-      </a>
-      <button class="menu-toggle">☰</button>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="academics.html">Academics</a></li>
-          <li><a href="admissions.html">Admissions</a></li>
-          <li><a href="calendar.html">Events</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span>🎓</span> Wolcrest Schools
+            </a>
+            <button class="menu-toggle">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="calendar.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- ==================== HERO SECTION ==================== -->
-  <section class="hero">
-    <h1>Calendar & Events</h1>
-    <p>Important dates and exciting events throughout the academic year</p>
-  </section>
-
-  <!-- ==================== MAIN CONTENT ==================== -->
-  <main>
-    <!-- Upcoming Events Section -->
-    <section>
-      <h2>Upcoming Events</h2>
-      <p style="margin-bottom: 2rem;">
-        Mark your calendars for these important dates and upcoming events at Wolcrest Schools.
-        Click on any event for more details.
-      </p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Event</th>
-            <th>Category</th>
-            <th>Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>June 2, 2026</strong></td>
-            <td>🎭 Annual Drama Festival</td>
-            <td>Arts</td>
-            <td>Evening performance showcasing student theatrical productions</td>
-          </tr>
-          <tr>
-            <td><strong>June 5, 2026</strong></td>
-            <td>📚 Library Appreciation Week</td>
-            <td>Academic</td>
-            <td>Special events and programs celebrating reading and learning</td>
-          </tr>
-          <tr>
-            <td><strong>June 8, 2026</strong></td>
-            <td>🏆 Annual Sports Day</td>
-            <td>Sports</td>
-            <td>Inter-class competitions in various sports disciplines</td>
-          </tr>
-          <tr>
-            <td><strong>June 15, 2026</strong></td>
-            <td>🎵 Music Recital</td>
-            <td>Arts</td>
-            <td>Students showcase their musical talents and progress</td>
-          </tr>
-          <tr>
-            <td><strong>June 20, 2026</strong></td>
-            <td>🏅 Academic Awards Ceremony</td>
-            <td>Academic</td>
-            <td>Recognition of outstanding academic achievements</td>
-          </tr>
-          <tr>
-            <td><strong>June 25, 2026</strong></td>
-            <td>🎓 Grade 12 Graduation</td>
-            <td>Ceremony</td>
-            <td>Celebration of graduates' achievements and future endeavors</td>
-          </tr>
-          <tr>
-            <td><strong>July 1, 2026</strong></td>
-            <td>🏖️ Summer Break Begins</td>
-            <td>Holiday</td>
-            <td>2-month summer vacation for all students</td>
-          </tr>
-          <tr>
-            <td><strong>July 15-25, 2026</strong></td>
-            <td>✈️ Educational Excursion</td>
-            <td>Learning</td>
-            <td>Optional study tour to historical and cultural sites</td>
-          </tr>
-          <tr>
-            <td><strong>August 1, 2026</strong></td>
-            <td>💻 Summer Camp</td>
-            <td>Enrichment</td>
-            <td>Technology and creative arts summer programs</td>
-          </tr>
-          <tr>
-            <td><strong>August 25, 2026</strong></td>
-            <td>🏫 New Academic Year Begins</td>
-            <td>Academic</td>
-            <td>Classes resume for the 2026-2027 academic year</td>
-          </tr>
-          <tr>
-            <td><strong>August 28, 2026</strong></td>
-            <td>📖 Orientation Programs</td>
-            <td>Academic</td>
-            <td>Orientation for new students and review sessions</td>
-          </tr>
-          <tr>
-            <td><strong>September 5, 2026</strong></td>
-            <td>👨‍👩‍👧‍👦 Parent-Teacher Meeting</td>
-            <td>Community</td>
-            <td>First parent-teacher conference of the year</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Get in touch with Wolcrest Schools</p>
     </section>
 
-    <!-- Academic Calendar Section -->
-    <section>
-      <h2>Academic Calendar 2026-2027</h2>
-      <p style="margin-bottom: 2rem;">
-        Here's the complete academic calendar for the 2026-2027 school year:
-      </p>
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+        <!-- Contact Form Section -->
+        <section>
+            <h2>Send Us a Message</h2>
+            <p style="margin-bottom: 2rem;">
+                Have a question or message? Fill out the form below and we'll get back to you as soon as possible.
+            </p>
 
-      <h3>📅 Key Academic Dates</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Period</th>
-            <th>Dates</th>
-            <th>Description</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>First Term</strong></td>
-            <td>Aug 25 - Oct 22, 2026</td>
-            <td>First semester classes and assessments</td>
-            <td>Upcoming</td>
-          </tr>
-          <tr>
-            <td><strong>Midterm Break</strong></td>
-            <td>Oct 23-29, 2026</td>
-            <td>One-week break between terms</td>
-            <td>Upcoming</td>
-          </tr>
-          <tr>
-            <td><strong>Second Term</strong></td>
-            <td>Oct 30 - Dec 18, 2026</td>
-            <td>Second semester classes and assessments</td>
-            <td>Upcoming</td>
-          </tr>
-          <tr>
-            <td><strong>Winter Holiday</strong></td>
-            <td>Dec 19, 2026 - Jan 3, 2027</td>
-            <td>Winter break (Christmas/New Year)</td>
-            <td>Upcoming</td>
-          </tr>
-          <tr>
-            <td><strong>Third Term</strong></td>
-            <td>Jan 4 - Feb 26, 2027</td>
-            <td>Third semester classes and midterm exams</td>
-            <td>Upcoming</td>
-          </tr>
-          <tr>
-            <td><strong>Midterm Exams</strong></td>
-            <td>Feb 1-5, 2027</td>
-            <td>Comprehensive midterm examinations</td>
-            <td>Upcoming</td>
-          </tr>
-          <tr>
-            <td><strong>Sports Week</strong></td>
-            <td>Feb 15-19, 2027</td>
-            <td>Inter-class sports competitions</td>
-            <td>Upcoming</td>
-          </tr>
-          <tr>
-            <td><strong>Spring Break</strong></td>
-            <td>Mar 1-5, 2027</td>
-            <td>One-week break</td>
-            <td>Upcoming</td>
-          </tr>
-          <tr>
-            <td><strong>Fourth Term</strong></td>
-            <td>Mar 6 - May 21, 2027</td>
-            <td>Fourth semester and final exams</td>
-            <td>Upcoming</td>
-          </tr>
-          <tr>
-            <td><strong>Final Exams</strong></td>
-            <td>May 10-18, 2027</td>
-            <td>Comprehensive final examinations</td>
-            <td>Upcoming</td>
-          </tr>
-          <tr>
-            <td><strong>Prize Distribution</strong></td>
-            <td>May 25, 2027</td>
-            <td>Annual awards and recognition ceremony</td>
-            <td>Upcoming</td>
-          </tr>
-          <tr>
-            <td><strong>Summer Break</strong></td>
-            <td>May 26 - Jul 31, 2027</td>
-            <td>2-month summer vacation</td>
-            <td>Upcoming</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+            <div class="two-column">
+                <form id="contactForm" class="form-container">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
 
-    <!-- Important Holidays Section -->
-    <section>
-      <h2>🎉 School Holidays & Observances</h2>
-      <p style="margin-bottom: 2rem;">
-        The following are recognized holidays and school closures during the academic year:
-      </p>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-      <div class="two-column">
-        <div>
-          <h3>National & Religious Holidays</h3>
-          <div class="cards-grid" style="grid-template-columns: 1fr;">
-            <div class="card">
-              <ul style="list-style-position: inside; margin-left: 1rem;">
-                <li><strong>Independence Day</strong> - September 1</li>
-                <li><strong>Teachers' Day</strong> - September 5</li>
-                <li><strong>Founder's Day</strong> - October 10</li>
-                <li><strong>Diwali</strong> - October 29</li>
-                <li><strong>Children's Day</strong> - November 14</li>
-                <li><strong>Christmas</strong> - December 25</li>
-              </ul>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">-- Select a Subject --</option>
+                            <option value="admissions">Admissions Inquiry</option>
+                            <option value="academics">Academics Question</option>
+                            <option value="fees">Fees & Payment</option>
+                            <option value="events">Events & Activities</option>
+                            <option value="feedback">Feedback/Suggestion</option>
+                            <option value="complaint">Complaint/Issue</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required
+                            placeholder="Please share your message or question..."></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
+
+                    <p style="font-size: 0.85rem; color: rgba(224, 224, 224, 0.7); margin-top: 1rem;">
+                        * Required fields. We typically respond within 24 hours.
+                    </p>
+                </form>
+
+                <div>
+                    <h3>Contact Information</h3>
+
+                    <div class="contact-methods">
+                        <div class="info-box">
+                            <h4>📍 Address</h4>
+                            <p>
+                                123 Education Street<br>
+                                Knowledge City, KC 12345<br>
+                                Country
+                            </p>
+                        </div>
+
+                        <div class="info-box">
+                            <h4>📞 Phone</h4>
+                            <p>
+                                <strong>Main:</strong> +1 (555) 123-4567<br>
+                                <strong>Admissions:</strong> +1 (555) 123-4568<br>
+                                <strong>Support:</strong> +1 (555) 123-4569
+                            </p>
+                        </div>
+
+                        <div class="info-box">
+                            <h4>✉️ Email</h4>
+                            <p>
+                                <strong>General:</strong> info@wolcrestschools.edu<br>
+                                <strong>Admissions:</strong> admissions@wolcrestschools.edu<br>
+                                <strong>Support:</strong> support@wolcrestschools.edu
+                            </p>
+                        </div>
+
+                        <div class="info-box">
+                            <h4>🕐 Office Hours</h4>
+                            <p>
+                                <strong>Monday - Friday:</strong> 7:30 AM - 4:00 PM<br>
+                                <strong>Saturday:</strong> 9:00 AM - 2:00 PM<br>
+                                <strong>Sunday:</strong> Closed
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 2rem;">Department Contacts</h3>
+
+                    <table style="font-size: 0.95rem; margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th>Department</th>
+                                <th>Extension</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Principal's Office</td>
+                                <td>200</td>
+                            </tr>
+                            <tr>
+                                <td>Admissions</td>
+                                <td>201</td>
+                            </tr>
+                            <tr>
+                                <td>Academic Affairs</td>
+                                <td>202</td>
+                            </tr>
+                            <tr>
+                                <td>Finance & Accounts</td>
+                                <td>203</td>
+                            </tr>
+                            <tr>
+                                <td>Student Affairs</td>
+                                <td>204</td>
+                            </tr>
+                            <tr>
+                                <td>Events & Activities</td>
+                                <td>205</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-          </div>
-        </div>
+        </section>
 
-        <div>
-          <h3>School-Specific Holidays</h3>
-          <div class="cards-grid" style="grid-template-columns: 1fr;">
-            <div class="card">
-              <ul style="list-style-position: inside; margin-left: 1rem;">
-                <li><strong>Founder's Celebration Week</strong> - Oct 8-12</li>
-                <li><strong>Thanksgiving Week</strong> - Nov 21-25</li>
-                <li><strong>New Year Break</strong> - Dec 31 & Jan 1</li>
-                <li><strong>Foundation Day</strong> - February 20</li>
-                <li><strong>Exam Preparation Break</strong> - April 15-30</li>
-              </ul>
+        <!-- Location & Map Section -->
+        <section>
+            <h2>Visit Us</h2>
+            <p style="margin-bottom: 1rem;">
+                Located in the heart of Knowledge City, Wolcrest Schools is easily accessible by public
+                transportation
+                and has ample parking facilities. You can also take a virtual tour of our campus.
+            </p>
+
+            <!-- Google Maps Embed Placeholder -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.287471231098!2d-74.00601592346962!3d40.71287367138999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e828aa4d%3A0x1e1f5e5e5e5e5e5e!2s123%20Education%20St%2C%20Knowledge%20City!5e0!3m2!1sen!2sus!4v1234567890"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
-          </div>
+
+            <div class="info-box" style="background: #cfe9ff; border-left-color: #0066cc;">
+                <strong>Directions:</strong> Take the Metro Line 5 to "Education Station" and exit towards the north.
+                Our campus is a 5-minute walk from the station. Ample parking is available in the school parking lot
+                (₹100/day for visitors).
+            </div>
+        </section>
+
+        <!-- Frequently Asked Questions Section -->
+        <section>
+            <h2>Frequently Asked Questions</h2>
+            <p style="margin-bottom: 2rem;">
+                Find quick answers to commonly asked questions below:
+            </p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h4>❓ What are the office hours?</h4>
+                    <p>
+                        Our office is open Monday to Friday from 7:30 AM to 4:00 PM, and Saturday from 9:00 AM to 2:00
+                        PM.
+                        Sunday is closed. For urgent matters, you can call our emergency hotline.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>❓ How long does it take to get a response?</h4>
+                    <p>
+                        We aim to respond to all inquiries within 24 hours. During peak periods like admission season,
+                        it may take up to 48 hours. Urgent matters are prioritized.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>❓ Can I schedule a campus tour?</h4>
+                    <p>
+                        Yes! Campus tours are available by appointment. Please contact the admissions office at
+                        admissions@wolcrestschools.edu or call +1 (555) 123-4568 to schedule a tour.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>❓ What if I have an urgent issue?</h4>
+                    <p>
+                        For urgent matters, please call our main office at +1 (555) 123-4567 and press 0 to speak
+                        with the operator, or visit our office in person during office hours.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>❓ How do I pay fees?</h4>
+                    <p>
+                        We accept online payments, bank transfers, credit cards, and checks. For details about payment
+                        methods
+                        and installment plans, contact our Finance department at +1 (555) 123-4567 ext. 203.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>❓ Is there an emergency contact?</h4>
+                    <p>
+                        In case of emergencies, please call our emergency hotline or visit the office immediately.
+                        For student-related emergencies, contact the student affairs office at ext. 204.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section>
+            <h2>Stay Updated</h2>
+            <p style="margin-bottom: 2rem;">
+                Subscribe to our newsletter to receive updates about school events, announcements, and important dates.
+            </p>
+
+            <div class="form-container" style="max-width: 500px;">
+                <form onsubmit="handleNewsletterSignup(event)">
+                    <div class="form-group">
+                        <label for="newsletter-email">Email Address *</label>
+                        <input type="email" id="newsletter-email" name="newsletter-email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newsletter-type">I'm interested in updates about: *</label>
+                        <select id="newsletter-type" name="newsletter-type" required>
+                            <option value="">-- Select --</option>
+                            <option value="academic">Academic News</option>
+                            <option value="events">Events & Activities</option>
+                            <option value="admissions">Admissions Info</option>
+                            <option value="all">All Updates</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="cta-button" style="width: 100%;">Subscribe</button>
+
+                    <p style="font-size: 0.85rem; color: #999; margin-top: 1rem;">
+                        We promise not to spam. You can unsubscribe anytime.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About</h4>
+                <p>Wolcrest Schools is dedicated to providing quality education and fostering holistic development
+                    of students.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul style="list-style: none;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 123 Education Street, Knowledge City, KC 12345</p>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>✉️ info@wolcrestschools.edu</p>
+            </div>
         </div>
-      </div>
-
-      <div class="info-box" style="background: #d4edda; border-left-color: #28a745; margin-top: 2rem;">
-        <strong>Note:</strong> The school calendar may be subject to changes due to unforeseen circumstances,
-        government directives, or emergency situations. Any changes will be communicated to parents and students
-        promptly through official channels.
-      </div>
-    </section>
-
-    <!-- Event Categories Section -->
-    <section>
-      <h2>Event Categories</h2>
-      <p style="margin-bottom: 2rem;">
-        Our events throughout the year cover various aspects of student development and engagement:
-      </p>
-
-      <div class="cards-grid">
-        <div class="card">
-          <h4>🎓 Academic Events</h4>
-          <ul style="list-style-position: inside; margin-left: 1rem;">
-            <li>Midterm & Final Exams</li>
-            <li>Orientation Programs</li>
-            <li>Seminars & Workshops</li>
-            <li>Quiz Competitions</li>
-            <li>Science Fairs</li>
-          </ul>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Wolcrest Schools. All rights reserved.</p>
         </div>
+    </footer>
 
-        <div class="card">
-          <h4>🏆 Sports & Athletics</h4>
-          <ul style="list-style-position: inside; margin-left: 1rem;">
-            <li>Annual Sports Day</li>
-            <li>Inter-class Tournaments</li>
-            <li>Athletic Meets</li>
-            <li>Sports Coaching Camps</li>
-            <li>Fitness Programs</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h4>🎭 Cultural & Arts</h4>
-          <ul style="list-style-position: inside; margin-left: 1rem;">
-            <li>Drama Festival</li>
-            <li>Music Recitals</li>
-            <li>Art Exhibitions</li>
-            <li>Dance Performances</li>
-            <li>Poetry Readings</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h4>👨‍👩‍👧‍👦 Community & Family</h4>
-          <ul style="list-style-position: inside; margin-left: 1rem;">
-            <li>Parent-Teacher Meetings</li>
-            <li>School Assembly</li>
-            <li>Community Service</li>
-            <li>Awards Ceremony</li>
-            <li>Family Day</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h4>🌍 Learning & Enrichment</h4>
-          <ul style="list-style-position: inside; margin-left: 1rem;">
-            <li>Field Trips</li>
-            <li>Educational Tours</li>
-            <li>Guest Lectures</li>
-            <li>Workshops</li>
-            <li>Summer Camps</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h4>🎉 Special Celebrations</h4>
-          <ul style="list-style-position: inside; margin-left: 1rem;">
-            <li>Founder's Day</li>
-            <li>Children's Day</li>
-            <li>Annual Gala</li>
-            <li>Graduation Ceremony</li>
-            <li>Prize Distribution</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact for Event Info -->
-    <section>
-      <h2>Need More Information?</h2>
-      <p style="margin-bottom: 2rem;">
-        For detailed information about any of these events or to register for participating events,
-        please contact the events coordinator.
-      </p>
-
-      <div class="info-box">
-        <h4>📧 Events Coordinator</h4>
-        <p><strong>Email:</strong> events@wolcrestschools.edu</p>
-        <p><strong>Phone:</strong> +1 (555) 123-4567 ext. 205</p>
-        <p style="margin-top: 1rem; font-size: 0.95rem;">
-          Available: Monday to Friday, 10 AM - 3 PM
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h4>About</h4>
-        <p>Wolcrest Schools is dedicated to providing quality education and fostering holistic development of
-          students.</p>
-      </div>
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul style="list-style: none;">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="academics.html">Academics</a></li>
-          <li><a href="admissions.html">Admissions</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Contact Info</h4>
-        <p>📍 123 Education Street, Knowledge City, KC 12345</p>
-        <p>📞 +1 (555) 123-4567</p>
-        <p>✉️ info@wolcrestschools.edu</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Wolcrest Schools. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function handleNewsletterSignup(event) {
+            event.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            const type = document.getElementById('newsletter-type').value;
+            alert(`Thank you for subscribing! We'll send you ${type} updates at ${email}.`);
+            event.target.reset();
+        }
+    </script>
 </body>
 
 </html>

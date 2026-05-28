@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ==================== SMOOTH PAGE NAVIGATION ==================== 
   document.querySelectorAll('a[href$=".html"]').forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
       // Allow default navigation but add fade effect
       const href = this.getAttribute('href');
       if (href && !href.startsWith('#')) {
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollTop = document.documentElement.scrollTop;
     const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrollPercent = scrollTop / docHeight;
-    
+
     // Add subtle parallax to hero section
     const hero = document.querySelector('.hero');
     if (hero) {
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==================== ADD ANIMATION TO INPUTS ON FOCUS ==================== 
   const inputs = document.querySelectorAll('input, textarea, select');
   inputs.forEach(input => {
-    input.addEventListener('focus', function() {
+    input.addEventListener('focus', function () {
       this.style.animation = 'scaleIn 0.3s ease';
     });
   });
