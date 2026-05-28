@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - Wolcrest Schools</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .curriculum-card {
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.08), rgba(255, 23, 68, 0.05));
+            border: 2px solid rgba(0, 102, 255, 0.3);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(0, 102, 255, 0.2);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: cardSlideIn 0.6s ease;
+        }
+
+        .curriculum-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 0 40px rgba(255, 23, 68, 0.4), 0 0 60px rgba(0, 102, 255, 0.3);
+            border-color: var(--neon-red);
+        }
+
+        .curriculum-card h4 {
+            color: var(--neon-blue);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            text-shadow: 0 0 10px rgba(0, 102, 255, 0.3);
+        }
+
+        .curriculum-card ul {
+            list-style: none;
+            color: #e0e0e0;
+        }
+
+        .curriculum-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .curriculum-card li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px rgba(0, 102, 255, 0.5);
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .subject-box {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 23, 68, 0.05));
+            border: 2px solid rgba(0, 212, 255, 0.4);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: scaleIn 0.6s ease;
+        }
+
+        .subject-box:hover {
+            transform: scale(1.08) translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.5), 0 0 40px rgba(255, 23, 68, 0.2);
+            border-color: var(--neon-red);
+        }
+
+        .subject-box h5 {
+            color: var(--neon-blue);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 10px rgba(0, 102, 255, 0.3);
+        }
+
+        .subject-box p {
+            font-size: 0.9rem;
+            color: rgba(224, 224, 224, 0.8);
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .faculty-card {
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.08), rgba(255, 23, 68, 0.05));
+            border: 2px solid rgba(0, 102, 255, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 102, 255, 0.2);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: cardSlideIn 0.6s ease;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4), 0 0 50px rgba(255, 23, 68, 0.2);
+            border-color: var(--neon-blue);
+        }
+
+        .faculty-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-red));
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
+        }
+
+        .faculty-card h4 {
+            color: var(--neon-blue);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 10px rgba(0, 102, 255, 0.3);
+        }
+
+        .faculty-card .position {
+            color: var(--neon-red);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 5px rgba(255, 23, 68, 0.3);
+        }
+
+        .faculty-card p {
+            color: rgba(224, 224, 224, 0.8);
+            font-size: 0.85rem;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 23, 68, 0.05));
+            border: 2px solid rgba(0, 212, 255, 0.4);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 102, 255, 0.2);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: scaleIn 0.6s ease;
+        }
+
+        .stat-box:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.5), 0 0 50px rgba(255, 23, 68, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--neon-blue);
+            font-weight: bold;
+            text-shadow: 0 0 15px rgba(0, 102, 255, 0.5);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: rgba(224, 224, 224, 0.9);
+            font-size: 0.95rem;
+        }
+
+        .achievement {
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.08), rgba(255, 23, 68, 0.05));
+            border-left: 4px solid var(--neon-red);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 102, 255, 0.15);
+            transition: all 0.3s ease;
+            animation: slideInLeft 0.6s ease;
+        }
+
+        .achievement:hover {
+            border-left-color: var(--neon-blue);
+            box-shadow: 0 0 25px rgba(0, 102, 255, 0.3);
+        }
+
+        .achievement-year {
+            color: var(--neon-blue);
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0, 102, 255, 0.3);
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-text {
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span>🎓</span> Wolcrest Schools
+            </a>
+            <button class="menu-toggle">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="calendar.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero">
+        <h1>Academics Excellence</h1>
+        <p>Fostering intellectual growth and academic achievement through innovative teaching methods</p>
+    </section>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+        <!-- Academic Programs -->
+        <section>
+            <h2>Academic Programs</h2>
+            <p style="margin-bottom: 2rem; color: rgba(224, 224, 224, 0.9);">
+                We offer comprehensive, world-class academic programs designed to challenge and inspire our students while promoting holistic development.
+            </p>
+
+            <div class="curriculum-grid">
+                <div class="curriculum-card">
+                    <h4>📚 Primary Education</h4>
+                    <p style="color: rgba(224, 224, 224, 0.8); margin-bottom: 1rem;">
+                        Building strong foundations in literacy, numeracy, and critical thinking.
+                    </p>
+                    <ul>
+                        <li>English & Literature</li>
+                        <li>Mathematics</li>
+                        <li>Science & Nature</li>
+                        <li>Social Studies</li>
+                        <li>Physical Education</li>
+                    </ul>
+                </div>
+
+                <div class="curriculum-card">
+                    <h4>🔬 Secondary Education</h4>
+                    <p style="color: rgba(224, 224, 224, 0.8); margin-bottom: 1rem;">
+                        Advanced curriculum with specialized subject tracks and research opportunities.
+                    </p>
+                    <ul>
+                        <li>Advanced Mathematics</li>
+                        <li>Sciences (Physics, Chemistry, Biology)</li>
+                        <li>English & Literature</li>
+                        <li>History & Geography</li>
+                        <li>Technology & Computing</li>
+                    </ul>
+                </div>
+
+                <div class="curriculum-card">
+                    <h4>🎯 Senior Secondary</h4>
+                    <p style="color: rgba(224, 224, 224, 0.8); margin-bottom: 1rem;">
+                        Specialized programs preparing students for higher education and career success.
+                    </p>
+                    <ul>
+                        <li>STEM Specialization</li>
+                        <li>Humanities Track</li>
+                        <li>Business Studies</li>
+                        <li>Arts & Design</li>
+                        <li>University Preparation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Subjects -->
+        <section>
+            <h2>Core Subjects</h2>
+            <p style="margin-bottom: 2rem; color: rgba(224, 224, 224, 0.9);">
+                Master essential knowledge across all disciplines with dedicated, expert instruction.
+            </p>
+
+            <div class="subject-grid">
+                <div class="subject-box">
+                    <h5>📖 English</h5>
+                    <p>Literature, grammar, communication, and writing excellence</p>
+                </div>
+                <div class="subject-box">
+                    <h5>🔢 Mathematics</h5>
+                    <p>Algebra, geometry, calculus, and problem-solving skills</p>
+                </div>
+                <div class="subject-box">
+                    <h5>🔬 Physics</h5>
+                    <p>Motion, energy, waves, and modern physics concepts</p>
+                </div>
+                <div class="subject-box">
+                    <h5>⚗️ Chemistry</h5>
+                    <p>Atomic structure, reactions, and practical laboratory work</p>
+                </div>
+                <div class="subject-box">
+                    <h5>🧬 Biology</h5>
+                    <p>Cell biology, genetics, ecology, and human systems</p>
+                </div>
+                <div class="subject-box">
+                    <h5>🌍 History</h5>
+                    <p>World history, civilizations, and critical historical analysis</p>
+                </div>
+                <div class="subject-box">
+                    <h5>💻 Technology</h5>
+                    <p>Programming, digital literacy, and computer science</p>
+                </div>
+                <div class="subject-box">
+                    <h5>🎨 Arts</h5>
+                    <p>Visual arts, creative expression, and cultural appreciation</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Excellence Stats -->
+        <section>
+            <h2>Academic Performance</h2>
+            <p style="margin-bottom: 2rem; color: rgba(224, 224, 224, 0.9);">
+                Our commitment to excellence is reflected in our outstanding results and student achievements.
+            </p>
+
+            <div class="stats-container">
+                <div class="stat-box">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Pass Rate</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">92%</div>
+                    <div class="stat-label">University Placement</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">15:1</div>
+                    <div class="stat-label">Student-Teacher Ratio</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">45+</div>
+                    <div class="stat-label">Top Scorers Annually</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Faculty -->
+        <section>
+            <h2>Our Faculty</h2>
+            <p style="margin-bottom: 2rem; color: rgba(224, 224, 224, 0.9);">
+                Our dedicated team of experienced educators is committed to student success and personal development.
+            </p>
+
+            <div class="faculty-grid">
+                <div class="faculty-card">
+                    <div class="faculty-avatar">👨‍🏫</div>
+                    <h4>Dr. John Mensah</h4>
+                    <div class="position">Head of Mathematics</div>
+                    <p>15+ years of mathematics education with expertise in advanced calculus and algebra.</p>
+                </div>
+
+                <div class="faculty-card">
+                    <div class="faculty-avatar">👩‍🏫</div>
+                    <h4>Mrs. Grace Agyeman</h4>
+                    <div class="position">Head of Sciences</div>
+                    <p>Specialist in physics and chemistry with research background and lab expertise.</p>
+                </div>
+
+                <div class="faculty-card">
+                    <div class="faculty-avatar">👨‍💼</div>
+                    <h4>Mr. David Owusu</h4>
+                    <div class="position">Head of Languages</div>
+                    <p>Expert in English literature with focus on critical thinking and communication skills.</p>
+                </div>
+
+                <div class="faculty-card">
+                    <div class="faculty-avatar">👩‍💼</div>
+                    <h4>Dr. Abena Asante</h4>
+                    <div class="position">Head of Technology</div>
+                    <p>Computer science specialist with industry experience and modern coding expertise.</p>
+                </div>
+
+                <div class="faculty-card">
+                    <div class="faculty-avatar">👨‍🎓</div>
+                    <h4>Mr. Kwame Boateng</h4>
+                    <div class="position">Head of Social Studies</div>
+                    <p>History and geography expert fostering global awareness and critical thinking.</p>
+                </div>
+
+                <div class="faculty-card">
+                    <div class="faculty-avatar">👩‍🎓</div>
+                    <h4>Ms. Ama Nkrumah</h4>
+                    <div class="position">Head of Arts</div>
+                    <p>Creative arts mentor inspiring students to express themselves through various mediums.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Achievements -->
+        <section>
+            <h2>Notable Academic Achievements</h2>
+            <p style="margin-bottom: 2rem; color: rgba(224, 224, 224, 0.9);">
+                Our students consistently achieve excellence in national and international competitions.
+            </p>
+
+            <div>
+                <div class="achievement">
+                    <div class="achievement-year">2026</div>
+                    <div class="achievement-text">🏆 National Science Olympiad - Gold Medal in Chemistry Category</div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-year">2026</div>
+                    <div class="achievement-text">📚 Regional Debate Championship - First Place Winners</div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-year">2025</div>
+                    <div class="achievement-text">🎯 International Mathematics Olympiad - 3 Students Qualified</div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-year">2025</div>
+                    <div class="achievement-text">🖥️ National ICT Competition - Innovation Award Winner</div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-year">2025</div>
+                    <div class="achievement-text">📖 Essay Writing Competition - Best Emerging Writer Award</div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-year">2024</div>
+                    <div class="achievement-text">🌍 Model United Nations - Outstanding Delegation</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Resources -->
+        <section>
+            <h2>Learning Resources</h2>
+            <p style="margin-bottom: 2rem; color: rgba(224, 224, 224, 0.9);">
+                We provide comprehensive support systems and resources to enhance student learning.
+            </p>
+
+            <div class="curriculum-grid">
+                <div class="curriculum-card">
+                    <h4>📖 Library</h4>
+                    <p style="color: rgba(224, 224, 224, 0.8); margin-bottom: 1rem;">
+                        15,000+ books, digital archives, and research materials across all subjects.
+                    </p>
+                </div>
+
+                <div class="curriculum-card">
+                    <h4>🖥️ Digital Learning</h4>
+                    <p style="color: rgba(224, 224, 224, 0.8); margin-bottom: 1rem;">
+                        Online platforms, interactive lessons, and virtual classroom support.
+                    </p>
+                </div>
+
+                <div class="curriculum-card">
+                    <h4>🧪 Lab Facilities</h4>
+                    <p style="color: rgba(224, 224, 224, 0.8); margin-bottom: 1rem;">
+                        State-of-the-art laboratories for practical experiments and research.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutoring & Support -->
+        <section>
+            <h2>Student Support Services</h2>
+            <p style="margin-bottom: 2rem; color: rgba(224, 224, 224, 0.9);">
+                We believe every student deserves personalized attention and support to succeed.
+            </p>
+
+            <div class="two-column">
+                <div class="column">
+                    <div class="info-box">
+                        <h3>Academic Tutoring</h3>
+                        <p>
+                            One-on-one and group tutoring sessions available in all core subjects. Our experienced tutors provide personalized strategies to help students overcome challenges and achieve their academic goals.
+                        </p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Counseling Services</h3>
+                        <p>
+                            Professional academic and personal counseling to support student well-being, career planning, and personal development throughout their educational journey.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="info-box">
+                        <h3>Exam Preparation</h3>
+                        <p>
+                            Comprehensive exam prep programs, practice tests, and revision workshops to ensure students are fully prepared for all assessments and major examinations.
+                        </p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Career Guidance</h3>
+                        <p>
+                            Expert guidance on university selection, career paths, and professional development to help students make informed decisions about their future.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About</h4>
+                <p>Wolcrest Schools is dedicated to providing quality education and fostering holistic development
+                    of students.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul style="list-style: none;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 4/6 karonwi street,modina road,egan
+                <p>📞 +1 (555) 123-4567</p>
+                <p>✉️ info@wolcrestschools.edu</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Wolcrest Schools. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
